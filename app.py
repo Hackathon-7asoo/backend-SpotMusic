@@ -14,7 +14,7 @@ def pagina_inicial():
     return "Hacka Grupo 9"
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=int(os.environ.get("PORT", 80)))
+    app.run('0.0.0.0', port=int(os.environ.get("PORT", 8080)))
 
 
 #def songs():
