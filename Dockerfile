@@ -15,7 +15,9 @@ COPY . /app
 # Instalar as dependências de Python de acordo com o que foi desenvolvido na aplicação e que está declarado no arquivo requirements.txt.
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-EXPOSE 80
+ENV PORT 8080
+ENV HOST 0.0.0.0
+EXPOSE 8080
 
 # Garante que será iniciado a aplicação.
 CMD ["run-program", "gunicorn", "app:app"]
