@@ -10,7 +10,11 @@ db_connection_name = os.environ.get('CLOUD_SQL_CONNECTION_NAME')
 
 def open_connection():
     try:
+        
+        print (db_connection_name, db_password, db_name, db_local_host, db_connection_name)
+
         if db_connection_name:
+            
             unix_socket = '/cloudsql/{}'.format(db_connection_name)
             conn = pymysql.connect(user=db_user, password=db_password,
                                 unix_socket=unix_socket, db=db_name,
