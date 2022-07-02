@@ -20,4 +20,4 @@ ENV HOST 0.0.0.0
 EXPOSE 8080
 
 # Garante que será iniciado a aplicação.
-CMD ["run-program", "gunicorn", "app:app"]
+CMD ["gunicorn", "app:app"]
